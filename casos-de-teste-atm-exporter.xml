@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project>
+    <projectId>10005</projectId>
+    <projectKey>SWAG</projectKey>
+    <exportDate>2022-12-13 18:47:28 UTC</exportDate>
+    <folders/>
+    <testCases>
+        <testCase id="76791322" key="SWAG-T1">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Mayra Alfonso</createdBy>
+            <createdOn>2022-12-12 03:32:53 UTC</createdOn>
+            <customFields/>
+            <issues/>
+            <labels/>
+            <name><![CDATA[Adicionar um produto ao carrinho]]></name>
+            <objective><![CDATA[Testar funcionalidade de adicionar produtos no carrinho de compras]]></objective>
+            <owner>631f6281cd4a82cf977c477a</owner>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Draft]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="bdd">
+                <details><![CDATA[Given o Usuário esteja na loja virtual 
+And independente que seja usuário logado ou não
+When quando adicionar um produto no carrinho de compras 
+Then então visualizará o produto adicionado.
+
+Given o Usuário esteja na loja virtual
+And independente que seja usuário logado ou não
+When quando adicionar dois produto no carrinho de compras
+Then então visualizará dois produto adicionado ao carrinho de compras.
+
+Given o usuário adiciono o produto no carrinho de compras
+And não queira mais comprar o produto
+When clicar em Remover
+Then visualizará o carrinho de compras vazio.]]></details>
+            </testScript>
+        </testCase>
+        <testCase id="76791610" key="SWAG-T2">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Mayra Alfonso</createdBy>
+            <createdOn>2022-12-12 04:05:15 UTC</createdOn>
+            <customFields/>
+            <issues/>
+            <labels/>
+            <name><![CDATA[Busca por produto]]></name>
+            <objective><![CDATA[Testar funcionalidade do campo Buscar]]></objective>
+            <owner>631f6281cd4a82cf977c477a</owner>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Draft]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="steps">
+                <steps>
+                    <step index="0">
+                        <customFields/>
+                        <description><![CDATA[Acessar a p&aacute;gina: https://www.saucedemo.com/]]></description>
+                        <expectedResult><![CDATA[Usuario debe visualizar a pagina da Loja virtual]]></expectedResult>
+                    </step>
+                    <step index="1">
+                        <customFields/>
+                        <description><![CDATA[Usuario digita no campo de Busca]]></description>
+                        <expectedResult><![CDATA[Usuario debe visualizar a pagina do produto buscado]]></expectedResult>
+                        <testData><![CDATA[<p>Sauce Labs Fleece Jacket</p>]]></testData>
+                    </step>
+                    <step index="2">
+                        <customFields/>
+                        <description><![CDATA[Usuario volta a digitar no campo de Busca]]></description>
+                        <expectedResult><![CDATA[Usuario debe visualizar a pagina de produto n&atilde;o encontrado]]></expectedResult>
+                        <testData><![CDATA[Sauce Labs Flowers]]></testData>
+                    </step>
+                </steps>
+            </testScript>
+        </testCase>
+        <testCase id="76793191" key="SWAG-T3">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Mayra Alfonso</createdBy>
+            <createdOn>2022-12-12 05:59:25 UTC</createdOn>
+            <customFields/>
+            <issues>
+                <issue>
+                    <key>SWAG-2</key>
+                    <summary><![CDATA[Como Usuario desejo Acessar a pagina de Login na loja virtual a fim de visualizar opções de login, cadastro e redifinição de senha.]]></summary>
+                </issue>
+            </issues>
+            <labels/>
+            <name><![CDATA[Autenticação de Usuario]]></name>
+            <owner>631f6281cd4a82cf977c477a</owner>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Draft]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="bdd">
+                <details><![CDATA[Given que o cliente esteja na tela de login
+And não esteja cadastrado no sistema
+When clicar em Criar Conta
+Then será redirecionado para uma tela de criação de nova conta.
+
+Given que o cliente esteja na tela de login
+And adicione um Username nao cadastrado
+When clicar em Criar Conta
+Then uma mensagem surgira avisando que o username não existe.
+
+Given que o cliente esteja na tela de login
+And um username Correto Mais escreve uma senha incorrecta
+When clicar em criar conta
+Then uma mensagem surgira avisando que a senha está incorrecta.]]></details>
+            </testScript>
+        </testCase>
+        <testCase id="76793790" key="SWAG-T4">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>Mayra Alfonso</createdBy>
+            <createdOn>2022-12-12 06:33:01 UTC</createdOn>
+            <customFields/>
+            <issues>
+                <issue>
+                    <key>SWAG-9</key>
+                    <summary><![CDATA[Como Usuario quero assinar o Newsletter da loja virtual]]></summary>
+                </issue>
+            </issues>
+            <labels/>
+            <name><![CDATA[Assinar Newsletter]]></name>
+            <owner>631f6281cd4a82cf977c477a</owner>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Draft]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="steps">
+                <steps>
+                    <step index="0">
+                        <customFields/>
+                        <description><![CDATA[Acessar Site: https://www.saucedemo.com/]]></description>
+                        <expectedResult><![CDATA[Usuario deve visualizar a tela da Loja virtual e o formulario de Assinar Newsletter]]></expectedResult>
+                    </step>
+                    <step index="1">
+                        <customFields/>
+                        <description><![CDATA[Digitar o correio eletr&oacute;nico]]></description>
+                        <expectedResult><![CDATA[Usuario deve visualizar tela de &quot;Muito obrigado por Assinar nossa Newsletter&quot;]]></expectedResult>
+                        <testData><![CDATA[msmpersonal@gmail.com]]></testData>
+                    </step>
+                    <step index="2">
+                        <customFields/>
+                        <description><![CDATA[Usuario Digita novamente seu correio eletr&oacute;nico]]></description>
+                        <expectedResult><![CDATA[Usuario deve visualizar tela de &quot;Correio eletr&oacute;nico ja cadastrado&quot;]]></expectedResult>
+                        <testData><![CDATA[msmpersonal@gmail.com]]></testData>
+                    </step>
+                </steps>
+            </testScript>
+        </testCase>
+    </testCases>
+</project>
